@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block main %}
+    <section id="welcome">
+        <h2></h2>
+        <a href=""></a>
+    </section>
+    <p>Aujourd'hui on est le {{ "now"|date("d/m/Y") }}</p>
+    <section id="temoignage">
+        <h2>Témoignage</h2>
+        <p>Découvrez ce que les gens disent de notre plateforme</p>
+        <div>
+            <div>
+                <img src="" alt="">
+                <p class="italic">"Ma fille a beaucoup appris grâce à cette plateforme. Les cours sont très informatifs et faciles à comprendre."</p>
+                <p class="bold">- Thérèse Dupont</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p class="italic">"Une excellente ressource pour l'apprentissage en ligne. Je la recommande à tout le monde!"</p>
+                <p class="bold">- Jean Curie</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p class="italic">"Les resources disponibles sont très utiles et variées. Une plateforme indispensable pour l'éducation"</p>
+                <p class="bold">- Albert Dorne</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

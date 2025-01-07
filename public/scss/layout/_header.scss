@@ -1,0 +1,40 @@
+@use "../abstract/mixins";
+@use "../abstract/variable" as var;
+
+header {
+    background-color: var.$backgroundheaderfooter;
+    padding-top: 2rem;
+
+    img {
+        height: 150px;
+    }
+    section {
+        @include mixins.flex($justify:space-between);
+        margin: 0 5%;
+
+        nav {
+        
+            ul {
+                @include mixins.flex();
+                transform: translateX(-70%);
+
+    
+                li {
+                    padding: 1rem;
+    
+                    a {
+                        color: white;
+                        font-size: 28px;
+                        @include mixins.hover();
+                    }
+                }
+            }
+        }
+    }
+    .orangeline {
+        background-color: var.$orange;
+        height: 5px;
+        width: 100%;
+    }
+    
+}

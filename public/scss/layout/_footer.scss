@@ -1,0 +1,26 @@
+@use "../abstract/mixins";
+@use "../abstract/variable" as var;
+
+footer {
+    @include mixins.flex(column);
+    background-color: var.$backgroundheaderfooter;
+    color: white;
+    padding: 2rem 0;
+
+    img {
+        height: 150px;
+    }
+
+    p,a{
+        margin-top: 0.5rem;
+    }
+
+    a {
+        color: white;
+        @include mixins.hover();
+    }
+
+    .copy{
+        margin-top: 3rem;
+    }
+}

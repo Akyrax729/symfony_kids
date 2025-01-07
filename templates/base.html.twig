@@ -3,15 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+        <link rel="stylesheet" href="{{asset("css/style.css")}}">
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            {% block header %}
+                <section>
+                    <img src="{{asset ('img/Logo.png')}}" alt="Logo de Kids-Learning">
+                    <nav>
+                        <ul>
+                            <li><a href="{{path ('app_home')}}">Accueil</a></li>
+                            <li><a href="{{path ('app_cours')}}">Cours</a></li>
+                            <li><a href="{{path ('app_ressources')}}">Ressources</a></li>
+                            <li><a href="{{path ('app_contact')}}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <div class="orangeline"></div>
+            {% endblock %}
+        </header>
+        <main>
+            {% block main %}
+                <p>Y a rien à voir ici</p>
+            {% endblock %}
+        </main>
+        <footer>   
+            {% block footer %}
+                <img src="{{asset ('img/Logo.png')}}" alt="Logo de Kids-Learning">
+                <p>Nous sommes ici pour répondre à vos questions et inquiétudes.</p>
+                <p>info@kids-learning.fr</p>
+                <p>01 23 45 67 89</p>
+                <a href="">Formulaire de contact</a>
+                <div class="line"></div>
+                <p class="copy">&copy 2023 Kids Learning. Tous droits réservés.</p>
+            {% endblock %}  
+        </footer>   
     </body>
 </html>
