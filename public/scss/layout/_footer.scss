@@ -20,7 +20,10 @@ footer {
         @include mixins.hover();
     }
 
-    .copy{
-        margin-top: 3rem;
+    .line {
+        margin: 3rem 0;
+        height: 1px;
+        width: 100%;
+        background-color: slategray;
     }
 }

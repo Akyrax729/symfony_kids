@@ -10,13 +10,13 @@
         <header>
             {% block header %}
                 <section>
-                    <img src="{{asset ('img/Logo.png')}}" alt="Logo de Kids-Learning">
+                    <a href="{{path ('app_home')}}"><img src="{{asset ('img/Logo.png')}}" alt="Logo de Kids-Learning"></a>
                     <nav>
                         <ul>
-                            <li><a href="{{path ('app_home')}}">Accueil</a></li>
-                            <li><a href="{{path ('app_cours')}}">Cours</a></li>
-                            <li><a href="{{path ('app_ressources')}}">Ressources</a></li>
-                            <li><a href="{{path ('app_contact')}}">Contact</a></li>
+                            <li><a class="{% if app.request.attributes.get('_route') == 'app_home' %}active{% endif %}" href="{{path ('app_home')}}">Accueil</a></li>
+                            <li><a class="{% if app.request.attributes.get('_route') == 'app_cours' %}active{% endif %}" href="{{path ('app_cours')}}">Cours</a></li>
+                            <li><a class="{% if app.request.attributes.get('_route') == 'app_ressources' %}active{% endif %}" href="{{path ('app_ressources')}}">Ressources</a></li>
+                            <li><a class="{% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %}" href="{{path ('app_contact')}}">Contact</a></li>
                         </ul>
                     </nav>
                 </section>
@@ -30,13 +30,13 @@
         </main>
         <footer>   
             {% block footer %}
-                <img src="{{asset ('img/Logo.png')}}" alt="Logo de Kids-Learning">
+                <a href="{{path ('app_home')}}"><img src="{{asset ('img/Logo.png')}}" alt="Logo de Kids-Learning"></a>
                 <p>Nous sommes ici pour répondre à vos questions et inquiétudes.</p>
                 <p>info@kids-learning.fr</p>
                 <p>01 23 45 67 89</p>
                 <a href="">Formulaire de contact</a>
                 <div class="line"></div>
-                <p class="copy">&copy 2023 Kids Learning. Tous droits réservés.</p>
+                <p>&copy 2023 Kids Learning. Tous droits réservés.</p>
             {% endblock %}  
         </footer>   
     </body>

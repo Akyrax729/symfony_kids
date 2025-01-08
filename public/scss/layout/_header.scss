@@ -5,6 +5,10 @@ header {
     background-color: var.$backgroundheaderfooter;
     padding-top: 2rem;
 
+    a {
+        @include mixins.hover();
+    }
+
     img {
         height: 150px;
     }
@@ -37,4 +41,10 @@ header {
         width: 100%;
     }
     
+    .active {
+        background-color: white;
+        color: var.$orange;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+    }
 }

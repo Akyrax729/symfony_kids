@@ -4,26 +4,26 @@
 
 {% block main %}
     <section id="welcome">
-        <h2></h2>
-        <a href=""></a>
+        <h2>Bienvenue sur Kids <span>Learning</span></h2>
+        <a class="btn" href="{{path ('app_cours')}}">Découvrir</a>
     </section>
-    <p>Aujourd'hui on est le {{ "now"|date("d/m/Y") }}</p>
+    <p id="date">Aujourd'hui on est le {{ "now"|date("d/m/Y") }}</p>
     <section id="temoignage">
         <h2>Témoignage</h2>
         <p>Découvrez ce que les gens disent de notre plateforme</p>
-        <div>
+        <div id="temoin">
             <div>
-                <img src="" alt="">
+                <img src="{{asset ('img/parent-1.jpeg')}}" alt="Photo d'un parent">
                 <p class="italic">"Ma fille a beaucoup appris grâce à cette plateforme. Les cours sont très informatifs et faciles à comprendre."</p>
                 <p class="bold">- Thérèse Dupont</p>
             </div>
             <div>
-                <img src="" alt="">
+                <img src="{{asset ('img/parent-2.jpeg')}}" alt="Photo d'un parent">
                 <p class="italic">"Une excellente ressource pour l'apprentissage en ligne. Je la recommande à tout le monde!"</p>
                 <p class="bold">- Jean Curie</p>
             </div>
             <div>
-                <img src="" alt="">
+                <img src="{{asset ('img/parent-3.jpeg')}}" alt="Photo d'un parent">
                 <p class="italic">"Les resources disponibles sont très utiles et variées. Une plateforme indispensable pour l'éducation"</p>
                 <p class="bold">- Albert Dorne</p>
             </div>

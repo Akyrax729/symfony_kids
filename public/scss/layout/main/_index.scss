@@ -1,0 +1,91 @@
+@use "../../abstract/mixins";
+@use "../../abstract/variable" as var;
+
+#welcome {
+    @include mixins.flex(column);
+    text-align: center;
+    color: var.$backgroundheaderfooter;
+    background-image: url("../img/banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+
+    h2 {
+        font-size: 100px;
+        transform: translateY(80%);
+
+        span {
+            padding-top: 2rem;
+            display: block;
+        }
+    }
+
+    .btn {
+        @include mixins.hover(white);
+        background-color: var.$orange;
+        display: block;
+        padding: 1rem 2rem;
+        color: white;
+        border-radius: 5px;
+        margin-top: auto;
+        font-size: 32px;
+    }
+
+}
+
+#date {
+    margin-top: 1rem;
+    @include mixins.flex(column);
+    font-size: 24px;
+}
+
+#temoignage {
+    @include mixins.flex(column);
+
+    h2 {
+        color: var.$backgroundheaderfooter;
+        font-size: 52px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    #temoin {
+        @include mixins.flex($align:flex-start);
+        margin: 3rem 4rem;
+        margin-top: 6rem;
+        
+        div {
+            position: relative;
+            background-color: white;
+            margin: 0 3px;
+            padding: 1rem;
+            padding-top: 150px;
+            width: 30%;
+            height: 200px;
+
+            img {
+                position: absolute;
+                top: calc((-200px - 10px) / 2.5);
+                left: calc(50% - ((200px - 5px) / 2));
+                height: 200px;
+                width: 200px;
+                object-fit: cover;
+                border-radius: 50%;
+                background-color: white;
+                padding: 10px;
+            }
+
+            .italic {
+                font-size: 28px;
+                font-style: italic;
+                margin: 5px;
+            }
+
+            .bold {
+                font-size: 28px;
+                font-weight: 600;
+                text-align: end;
+            }
+        }
+    }
+}
